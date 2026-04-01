@@ -139,4 +139,3 @@ if st.button("Start Survey"):
 
         st.success(f"Your results are saved as {json_filename}")
         st.download_button("Download your result JSON", json.dumps(record, indent=2), file_name=json_filename)
- 
