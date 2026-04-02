@@ -8,46 +8,58 @@ import os
 version_float = 1.1
 
 questions = [
-    {"q": "How often do you feel overwhelmed by your responsibilities?",
+    {"q": "How often do you participate in volunteering activities?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How well do you sleep at night?",
-     "opts": [("Very well",0),("Fairly well",1),("Occasionally restless",2),("Often restless",3),("Very poorly",4)]},
-    {"q": "How often do you feel anxious about your academic performance?",
+   
+    {"q": "How often do you actively seek opportunities to volunteer?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How would you rate your ability to concentrate on studies?",
-     "opts": [("Excellent",0),("Good",1),("Fair",2),("Poor",3),("Very poor",4)]},
-    {"q": "How often do you feel isolated from peers?",
+
+    {"q": "How often do you volunteer even when it is not required for academic or professional reasons?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How satisfied are you with your social life?",
-     "opts": [("Very satisfied",0),("Satisfied",1),("Neutral",2),("Dissatisfied",3),("Very dissatisfied",4)]},
-    {"q": "How often do you experience physical symptoms of stress (headaches, fatigue)?",
+
+    {"q": "How often do you choose volunteering over other leisure activities?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How well do you manage your time?",
-     "opts": [("Very well",0),("Well",1),("Adequately",2),("Poorly",3),("Very poorly",4)]},
-    {"q": "How often do you feel pressure to meet deadlines?",
+
+    {"q": "How often do you participate in volunteering despite having a busy schedule?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How would you rate your overall mental well-being?",
-     "opts": [("Excellent",0),("Good",1),("Fair",2),("Poor",3),("Very poor",4)]},
-    {"q": "How often do you engage in relaxation activities?",
-     "opts": [("Daily",0),("Several times a week",1),("Weekly",2),("Rarely",3),("Never",4)]},
-    {"q": "How supported do you feel by your instructors?",
-     "opts": [("Very supported",0),("Supported",1),("Neutral",2),("Unsupported",3),("Very unsupported",4)]},
-    {"q": "How often do you worry about your future career?",
+
+    {"q": "How often do you engage in different types of volunteer activities (e.g., community service, mentoring, environmental work)?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
-    {"q": "How would you rate your financial stress level?",
-     "opts": [("None",0),("Mild",1),("Moderate",2),("High",3),("Severe",4)]},
-    {"q": "How often do you feel optimistic about your academic journey?",
-     "opts": [("Always",0),("Often",1),("Sometimes",2),("Rarely",3),("Never",4)]}
+
+    {"q": "How often do you maintain consistent involvement in volunteering over time?",
+     "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
+    
+    {"q": "To what extent do you feel that volunteering gives your life meaning?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]},
+
+    {"q": "To what extent do you feel that volunteering allows you to contribute to something important?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]},
+
+    {"q": "To what extent does volunteering provide you with a sense of direction in life?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]},
+
+    {"q": "To what extent do you feel fulfilled after participating in volunteer activities?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]},
+
+    {"q": "To what extent has volunteering helped you understand your personal values?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]},
+
+    {"q": "To what extent does volunteering increase your motivation in life?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]},
+
+    {"q": "To what extent do you feel that volunteering supports your long-term goals?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]},
+
+    {"q": "To what extent do you experience a sense of achievement from volunteering?",
+     "opts": [("Not at all",0),("Slightly",1),("Moderately",2),("Strongly",3),("Very strongly",4)]}
 ]
 
 psych_states = {
-    "Very Low Stress": (0, 15),
-    "Low Stress": (16, 30),
-    "Moderate Stress": (31, 45),
-    "High Stress": (46, 60),
-    "Very High Stress": (61, 75),
-    "Severe Stress": (76, 90),
-    "Critical State": (91, 200)
+    "Very Low Purpose from Volunteering": (0, 12),
+    "Low Purpose from Volunteering": (13, 24),
+    "Moderate Purpose": (25, 36),
+    "High Purpose from Volunteering": (37, 48),
+    "Very High Purpose and Engagement": (49, 60)
 }
 
 # ---------------- HELPERS ----------------
@@ -72,10 +84,10 @@ def save_json(filename: str, data: dict):
         json.dump(data, f, indent=2)
 
 # ---------------- STREAMLIT APP ----------------
-st.set_page_config(page_title="Student Psychological Survey")
-st.title("📝 Student Psychological Survey")
+st.set_page_config(page_title="Volunteer Activity Survey")
+st.title("📝 Volunteering Activity & Sense of Purpose Survey")
 
-st.info("Please fill out your details and answer all questions honestly.")
+st.info("Please provide your details and answer all questions honestly based on your volunteering experience.")
 
 # --- User Info ---
 name = st.text_input("Given Name")
