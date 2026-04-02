@@ -89,6 +89,8 @@ st.title("📝 Volunteering Activity & Sense of Purpose Survey")
 
 st.info("Please provide your details and answer all questions honestly based on your volunteering experience.")
 
+if "started" not in st.session_state:
+    st.session_state.started = False
 # --- User Info ---
 name = st.text_input("Given Name")
 surname = st.text_input("Surname")
@@ -114,6 +116,9 @@ if st.button("Start Survey"):
             st.error(e)
     else:
         st.success("All inputs are valid. Proceed to answer the questions below.")
+        st.session_state.started = True
+        
+if st.session_state.started:
 
         total_score = 0
         answers = []
