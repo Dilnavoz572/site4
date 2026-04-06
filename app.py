@@ -11,7 +11,7 @@ questions = [
     {"q": "How often do you participate in volunteering activities?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
    
-    {"q": "How often do you actively seek opportunities to volunteer?",
+    {"q": "How often do you actively look for opportunities to volunteer?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
 
     {"q": "How often do you volunteer even when it is not required for academic or professional reasons?",
@@ -20,13 +20,13 @@ questions = [
     {"q": "How often do you choose volunteering over other leisure activities?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
 
-    {"q": "How often do you participate in volunteering despite having a busy schedule?",
+    {"q": "How often do you participate in volunteering even though you have a busy schedule?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
 
-    {"q": "How often do you engage in different types of volunteer activities (e.g., community service, mentoring, environmental work)?",
+    {"q": "How often do you feel personally motivated to participate in volunteering activities?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
 
-    {"q": "How often do you maintain consistent involvement in volunteering over time?",
+    {"q": "How often do you actively search volunteering activities because you find them meaningful?",
      "opts": [("Never",0),("Rarely",1),("Sometimes",2),("Often",3),("Always",4)]},
     
     {"q": "To what extent do you feel that volunteering gives your life meaning?",
@@ -55,11 +55,11 @@ questions = [
 ]
 
 psych_states = {
-    "Very Low Purpose from Volunteering": (0, 12),
-    "Low Purpose from Volunteering": (13, 24),
-    "Moderate Purpose": (25, 36),
-    "High Purpose from Volunteering": (37, 48),
-    "Very High Purpose and Engagement": (49, 60)
+    "Very Low Sense of Purpose": (0, 12),
+    "Low Sense of Purpose": (13, 24),
+    "Moderate Sense of Purpose": (25, 36),
+    "High Sense of Purpose": (37, 48),
+    "Very High Sense of Purpose": (49, 60)
 }
 
 # ---------------- HELPERS ----------------
